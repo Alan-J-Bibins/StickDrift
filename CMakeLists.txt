@@ -17,13 +17,13 @@ qt_standard_project_setup(REQUIRES 6.8)
 set(QT_QML_GENERATE_QMLLS_INI ON)
 
 qt_add_executable(appStickDrift
-    main.cpp
+    app/main.cpp
 )
 
 qt_add_qml_module(appStickDrift
     URI StickDrift
     QML_FILES
-        Main.qml
+        qml/Main.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
