@@ -24,6 +24,11 @@ do_clean() {
     rm -rf "$BUILD_DIR"
 }
 
+do_run() {
+    echo "Running..."
+    ./build/appStickDrift
+}
+
 case "$1" in
     configure)
         do_configure
@@ -34,8 +39,15 @@ case "$1" in
     clean)
         do_clean
         ;;
+    run)
+        do_run
+        ;;
+    buildRun)
+        do_build
+        do_run
+        ;;
     *)
-        echo "Usage: $0 {configure|build|clean}"
+        echo "Usage: $0 {configure|build|clean|run|buildRun}"
         exit 1
         ;;
 esac
