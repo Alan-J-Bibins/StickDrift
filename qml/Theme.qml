@@ -14,16 +14,16 @@ QtObject {
 
 
     // Fonts
-    readonly property FontLoader _bf1: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-Black.otf"}
-    readonly property FontLoader _bf2: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-BlackItalic.otf"}
-    readonly property FontLoader _bf3: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-Bold.otf"}
-    readonly property FontLoader _bf4: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-BoldItalic.otf"}
-    readonly property FontLoader _bf5: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-Italic.otf"}
-    readonly property FontLoader _bf6: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-Light.otf"}
-    readonly property FontLoader _bf7: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-LightItalic.otf"}
-    readonly property FontLoader _bf8: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-Medium.otf"}
-    readonly property FontLoader _bf9: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-MediumItalic.otf"}
-    readonly property FontLoader _bf10: FontLoader { source: "../assets/fonts/Satoshi/Satoshi-Regular.otf"}
+    readonly property FontLoader _bf1: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-Black.otf"}
+    readonly property FontLoader _bf2: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-BlackItalic.otf"}
+    readonly property FontLoader _bf3: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-Bold.otf"}
+    readonly property FontLoader _bf4: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-BoldItalic.otf"}
+    readonly property FontLoader _bf5: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-Italic.otf"}
+    readonly property FontLoader _bf6: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-Light.otf"}
+    readonly property FontLoader _bf7: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-LightItalic.otf"}
+    readonly property FontLoader _bf8: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-Medium.otf"}
+    readonly property FontLoader _bf9: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-MediumItalic.otf"}
+    readonly property FontLoader _bf10: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-Regular.otf"}
 
     readonly property string baseFontFamily: _bf1.name
 }

@@ -1,5 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QDirIterator>
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
@@ -14,5 +16,11 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
     engine.loadFromModule("StickDrift", "Main");
 
+    // Iterate through qresources to check if things got imported properly
+    // QDirIterator it(":", QDirIterator::Subdirectories);
+    // while (it.hasNext()) {
+    //     qDebug() << it.next();
+    // }
+    //
     return app.exec();
 }

@@ -12,10 +12,10 @@ Rectangle {
         padding: 12.0
         spacing: 2
 
-        Text {
-            text: buttonRoot.content.toString()
-            font.family: "Satoshi"
-            font.pixelSize: 64
+        BaseText {
+            textLabel.text: buttonRoot.content.toString()
+            textLabel.font.pixelSize: 24
+            textLabel.font.weight: Font.Black
         }
     }
 

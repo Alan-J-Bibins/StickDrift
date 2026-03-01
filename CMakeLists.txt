@@ -8,32 +8,58 @@ endif()
 project(StickDrift VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Needed to make lsps in neovim work
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(QT_QML_GENERATE_QMLLS_INI ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
-set(QT_QML_GENERATE_QMLLS_INI ON)
-
 qt_add_executable(appStickDrift
     app/main.cpp
 )
 
+qt_add_resources(appStickDrift "app_fonts"
+    PREFIX ""
+    FILES
+        assets/fonts/Satoshi/Satoshi-Black.otf
+        assets/fonts/Satoshi/Satoshi-BlackItalic.otf
+        assets/fonts/Satoshi/Satoshi-Bold.otf
+        assets/fonts/Satoshi/Satoshi-BoldItalic.otf
+        assets/fonts/Satoshi/Satoshi-Light.otf
+        assets/fonts/Satoshi/Satoshi-LightItalic.otf
+        assets/fonts/Satoshi/Satoshi-Medium.otf
+        assets/fonts/Satoshi/Satoshi-MediumItalic.otf
+        assets/fonts/Satoshi/Satoshi-Regular.otf
+        assets/fonts/Satoshi/Satoshi-Italic.otf
+)
+
+set(plain_qml_files
+    qml/Main.qml
+    qml/common/text/BaseText.qml
+    qml/common/Button.qml
+)
+
+set(qml_singletons
+    qml/Theme.qml
+)
+
+# https://doc.qt.io/qt-6/qml-singleton.html mentions that QT_QML_SINGLETON_TYPE flag has to be set to true to use Singletons
+set_source_files_properties(${qml_singletons}
+    PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
+
 qt_add_qml_module(appStickDrift
     URI StickDrift
-    QML_FILES
-        qml/Main.qml
-        qml/Theme.qml
-        qml/common/text/BaseText.qml
-        qml/common/Button.qml
+    QML_FILES ${plain_qml_files} ${qml_singletons}
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
 set_target_properties(appStickDrift PROPERTIES
-#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appStickDrift
+    #    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appStickDrift
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
