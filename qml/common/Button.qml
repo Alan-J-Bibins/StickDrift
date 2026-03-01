@@ -12,10 +12,9 @@ Rectangle {
         padding: 12.0
         spacing: 2
 
-        BaseText {
+        TitleText {
             textLabel.text: buttonRoot.content.toString()
             textLabel.font.pixelSize: 24
-            textLabel.font.weight: Font.Black
         }
     }
 

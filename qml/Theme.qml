@@ -25,5 +25,13 @@ QtObject {
     readonly property FontLoader _bf9: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-MediumItalic.otf"}
     readonly property FontLoader _bf10: FontLoader { source: "/assets/fonts/Satoshi/Satoshi-Regular.otf"}
 
+    readonly property FontLoader _hf1: FontLoader {source: "/assets/fonts/ClashDisplay/ClashDisplay-Bold.otf"}
+    readonly property FontLoader _hf2: FontLoader {source: "/assets/fonts/ClashDisplay/ClashDisplay-Extralight.otf"}
+    readonly property FontLoader _hf3: FontLoader {source: "/assets/fonts/ClashDisplay/ClashDisplay-Light.otf"}
+    readonly property FontLoader _hf4: FontLoader {source: "/assets/fonts/ClashDisplay/ClashDisplay-Medium.otf"}
+    readonly property FontLoader _hf5: FontLoader {source: "/assets/fonts/ClashDisplay/ClashDisplay-Regular.otf"}
+    readonly property FontLoader _hf6: FontLoader {source: "/assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf"}
+
     readonly property string baseFontFamily: _bf1.name
+    readonly property string titleFontFamily: _hf1.name
 }

@@ -34,12 +34,19 @@ qt_add_resources(appStickDrift "app_fonts"
         assets/fonts/Satoshi/Satoshi-MediumItalic.otf
         assets/fonts/Satoshi/Satoshi-Regular.otf
         assets/fonts/Satoshi/Satoshi-Italic.otf
+        assets/fonts/ClashDisplay/ClashDisplay-Bold.otf
+        assets/fonts/ClashDisplay/ClashDisplay-Extralight.otf
+        assets/fonts/ClashDisplay/ClashDisplay-Light.otf
+        assets/fonts/ClashDisplay/ClashDisplay-Medium.otf
+        assets/fonts/ClashDisplay/ClashDisplay-Regular.otf
+        assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf
 )
 
 set(plain_qml_files
     qml/Main.qml
-    qml/common/text/BaseText.qml
     qml/common/Button.qml
+    qml/common/text/BaseText.qml
+    qml/common/text/TitleText.qml
 )
 
 set(qml_singletons
