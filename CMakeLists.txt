@@ -24,6 +24,9 @@ qt_add_qml_module(appStickDrift
     URI StickDrift
     QML_FILES
         qml/Main.qml
+        qml/Theme.qml
+        qml/common/text/BaseText.qml
+        qml/common/Button.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
