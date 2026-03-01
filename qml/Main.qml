@@ -9,11 +9,18 @@ Window {
 
     Column {
         Button {
-            content: "something"
+            BaseText {
+                textLabel.text: "hlloe"
+            }
         }
-        Button {
-            content: "testing a very very long string"
+        Button{
+            childrenContainer.padding: 32
+            color: mouse.hovered ? "red" : "blue"
+
+            TitleText{
+                textLabel.text: "WTF"
+                textLabel.font.pixelSize: 24
+            }
         }
     }
-
 }

@@ -2,24 +2,25 @@ import QtQuick
 
 Rectangle {
     id: buttonRoot
-    color: mouse.hovered ? "#0e081d": "blue";
-    property string content: ""
-    width: layoutColumn.width
-    height: layoutColumn.height
+    color: mouseHandler.hovered ? "#0e081d": "blue";
+
+    implicitWidth: layoutColumn.implicitWidth
+    implicitHeight: layoutColumn.implicitHeight
+
+    property alias root: buttonRoot
+    property alias mouse: mouseHandler
+
+    property alias childrenContainer: layoutColumn
+    default property alias children: layoutColumn.data
 
     Column {
         id: layoutColumn
         padding: 12.0
         spacing: 2
-
-        TitleText {
-            textLabel.text: buttonRoot.content.toString()
-            textLabel.font.pixelSize: 24
-        }
     }
 
     HoverHandler {
-        id: mouse
+        id: mouseHandler
         acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
         cursorShape: Qt.PointingHandCursor
     }
