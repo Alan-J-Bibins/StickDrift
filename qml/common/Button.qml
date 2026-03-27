@@ -2,7 +2,9 @@ import QtQuick
 
 Rectangle {
     id: buttonRoot
-    color: mouseHandler.hovered ? "#0e081d": "blue";
+    color: mouseHandler.hovered ? "#1d1d1d": "transparent";
+    border.width: 1
+    border.color: Theme.text
 
     implicitWidth: layoutColumn.implicitWidth
     implicitHeight: layoutColumn.implicitHeight
