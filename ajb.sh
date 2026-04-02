@@ -9,6 +9,7 @@ do_configure() {
     echo "Configuring..."
     cmake -B "$BUILD_DIR" -S . -G "$GENERATOR" \
     -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN" \
+    -DVCPKG_MAX_CONCURRENCY=4 \
     -DVCPKG_SET_CHARSET_FLAG=ON \
     -DVCPKG_INSTALL_OPTIONS="--clean-after-build;--clean-buildtrees-after-build;--clean-packages-after-build"
 }
@@ -19,7 +20,7 @@ do_build() {
         echo "Build directory not found. Configuring first..."
         do_configure
     fi
-    cmake --build "$BUILD_DIR"
+    cmake --build "$BUILD_DIR" -j 4
 }
 
 do_clean() {
