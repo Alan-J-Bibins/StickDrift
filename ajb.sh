@@ -7,7 +7,10 @@ GENERATOR="Ninja"
 
 do_configure() {
     echo "Configuring..."
-    cmake -B "$BUILD_DIR" -S . -G "$GENERATOR" -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN"
+    cmake -B "$BUILD_DIR" -S . -G "$GENERATOR" \
+    -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN" \
+    -DVCPKG_SET_CHARSET_FLAG=ON \
+    -DVCPKG_INSTALL_OPTIONS="--clean-after-build;--clean-buildtrees-after-build;--clean-packages-after-build"
 }
 
 do_build() {
@@ -29,6 +32,16 @@ do_run() {
     ./build/appStickDrift
 }
 
+do_clean_vcpkg() {
+    echo "Cleaning vcpkg internal caches..."
+    # Warning: This will force vcpkg to re-download/re-build next time if cache is gone
+    # vcpkg contactable-empty-dir # Standard vcpkg way to find paths, but usually:
+    rm -rf "$HOME/.local/share/vcpkg/buildtrees/*"
+    rm -rf "$HOME/.local/share/vcpkg/packages/*"
+    rm -rf "$HOME/.local/share/vcpkg/downloads/*"
+    echo "Done!"
+}
+
 case "$1" in
     configure)
         do_configure
@@ -39,6 +52,9 @@ case "$1" in
     clean)
         do_clean
         ;;
+    "clean-vcpkg")
+        do_clean_vcpkg
+        ;;
     run)
         do_run
         ;;
@@ -47,7 +63,7 @@ case "$1" in
         do_run
         ;;
     *)
-        echo "Usage: $0 {configure|build|clean|run|buildRun}"
+        echo "Usage: $0 {configure|build|clean|clean-vcpkg|run|buildRun}"
         exit 1
         ;;
 esac
