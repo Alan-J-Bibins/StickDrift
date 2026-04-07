@@ -42,11 +42,28 @@ qt_add_resources(appStickDrift "app_fonts"
         assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf
 )
 
+qt_add_resources(appStickDrift "app_icons"
+    PREFIX ""
+    FILES
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Canvas.svg
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Ellipse.svg
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Frame.svg
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Pencil.svg
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Polygon.svg
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Scale.svg
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Section.svg
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Select.svg
+)
+
 set(plain_qml_files
     qml/Main.qml
-    qml/common/Button.qml
+    qml/common/PrimaryButton.qml
     qml/common/text/BaseText.qml
     qml/common/text/TitleText.qml
+    qml/components/ToolSelect/ToolSelect.qml
+    qml/components/ToolSelect/ToolSelectItem.qml
+    qml/screens/WelcomeScreen.qml
+    qml/screens/WorkspaceScreen.qml
 )
 
 set(qml_singletons
