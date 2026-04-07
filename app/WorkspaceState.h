@@ -1,5 +1,5 @@
-#ifndef EDITORSTATE_H
-#define EDITORSTATE_H
+#ifndef WORKSPACESTATE_H
+#define WORKSPACESTATE_H
 
 #include "Constants.h"
 #include <QObject>
@@ -8,16 +8,16 @@
 class QQmlEngine;
 class QJSEngine;
 
-class EditorState : public QObject {
+class WorkspaceState : public QObject {
     Q_OBJECT
     Q_PROPERTY(StickDrift::ToolType currentTool READ currentTool WRITE setCurrentTool NOTIFY currentToolChanged)
     QML_ELEMENT
     QML_SINGLETON
 
 public:
-    static EditorState* instance();
+    static WorkspaceState* instance();
 
-    static EditorState* create(QQmlEngine *qmlEngine, QJSEngine *jsEngine) {
+    static WorkspaceState* create(QQmlEngine *qmlEngine, QJSEngine *jsEngine) {
         Q_UNUSED(qmlEngine)
         Q_UNUSED(jsEngine)
         return instance(); 
@@ -38,7 +38,7 @@ signals:
     void currentToolChanged();
 
 private:
-    explicit EditorState(QObject* parent = nullptr)
+    explicit WorkspaceState(QObject* parent = nullptr)
         : QObject(parent)
     {
         m_currentTool = StickDrift::ToolType::Select;

@@ -15,35 +15,35 @@ Rectangle {
 
         ToolSelectItem {
             iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Select.svg"
-            toolType: EditorTool.Select
+            toolType: WorkspaceTool.Select
         }
         ToolSelectItem {
             iconSource: "qrc:/assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Scale.svg"
-            toolType: EditorTool.Scale
+            toolType: WorkspaceTool.Scale
         }
         ToolSelectItem {
             iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Frame.svg"
-            toolType: EditorTool.Frame
+            toolType: WorkspaceTool.Frame
         }
         ToolSelectItem {
             iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Canvas.svg"
-            toolType: EditorTool.Canvas
+            toolType: WorkspaceTool.Canvas
         }
         ToolSelectItem {
             iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Polygon.svg"
-            toolType: EditorTool.Polygon
+            toolType: WorkspaceTool.Polygon
         }
         ToolSelectItem {
             iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Ellipse.svg"
-            toolType: EditorTool.Ellipse
+            toolType: WorkspaceTool.Ellipse
         }
         ToolSelectItem {
             iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Section.svg"
-            toolType: EditorTool.Section
+            toolType: WorkspaceTool.Section
         }
         ToolSelectItem {
             iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Pencil.svg"
-            toolType: EditorTool.Pencil
+            toolType: WorkspaceTool.Pencil
         }
     }
 }

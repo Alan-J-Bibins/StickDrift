@@ -7,7 +7,7 @@
 namespace StickDrift {
 Q_NAMESPACE
 QML_ELEMENT
-QML_NAMED_ELEMENT(EditorTool)
+QML_NAMED_ELEMENT(WorkspaceTool)
 
 enum class ToolType {
     Select,

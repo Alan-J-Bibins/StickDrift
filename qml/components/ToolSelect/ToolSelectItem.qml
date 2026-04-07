@@ -11,13 +11,13 @@ Button {
 
     onClicked: {
         console.log("Setting to ", toolType);
-        EditorState.currentTool = toolSelectItem.toolType
+        WorkspaceState.currentTool = toolSelectItem.toolType
     }
 
     background: Rectangle {
         anchors.fill: parent
-        color: EditorState.currentTool === toolSelectItem.toolType ? Qt.alpha(Theme.text, 0.1) : toolSelectItem.hovered ? Qt.alpha(Theme.text, 0.1) : Qt.alpha(Theme.text, 0.0)
-        border.color: EditorState.currentTool === toolSelectItem.toolType ? Qt.alpha(Theme.text, 0.2) :  toolSelectItem.hovered ? Qt.alpha(Theme.text,0.2) : Qt.alpha(Theme.text,0.0)
+        color: WorkspaceState.currentTool === toolSelectItem.toolType ? Qt.alpha(Theme.text, 0.1) : toolSelectItem.hovered ? Qt.alpha(Theme.text, 0.1) : Qt.alpha(Theme.text, 0.0)
+        border.color: WorkspaceState.currentTool === toolSelectItem.toolType ? Qt.alpha(Theme.text, 0.2) :  toolSelectItem.hovered ? Qt.alpha(Theme.text,0.2) : Qt.alpha(Theme.text,0.0)
         border.width: 2
         radius: 0
 
