@@ -5,6 +5,8 @@ Rectangle {
     implicitWidth: toolSelectRow.width
     implicitHeight: toolSelectRow.height
     color: Theme.background_2
+    border.width: 1
+    border.color: Theme.text
 
     Row {
         id: toolSelectRow
