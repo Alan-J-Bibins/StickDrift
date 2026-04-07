@@ -15,7 +15,7 @@ Button {
         Behavior on color {
             ColorAnimation {
                 duration: 150
-                easing.type: Easing.InCubic
+                easing.type: Easing.Linear
             }
         }
     }
