@@ -4,7 +4,8 @@ import QtQuick.Layouts
 
 Item {
     id: welcomeScreen
-    anchors.fill: parent
+    implicitWidth: 1920
+    implicitHeight: 1080
     signal newProjectRequested()
 
     Shape {

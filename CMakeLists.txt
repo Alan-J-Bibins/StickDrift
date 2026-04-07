@@ -79,10 +79,12 @@ set(qml_singletons
 set(app_headers
     app/Constants.h
     app/WorkspaceState.h
+    app/WorkspaceEngine.h
 )
 
 set(app_files
     app/WorkspaceState.cpp
+    app/WorkspaceEngine.cpp
 )
 
 # https://doc.qt.io/qt-6/qml-singleton.html mentions that QT_QML_SINGLETON_TYPE flag has to be set to true to use Singletons
