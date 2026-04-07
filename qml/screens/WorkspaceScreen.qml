@@ -8,9 +8,9 @@ Item {
         color: Theme.background_1
     }
 
-    Row {
-        padding: 24
-
-        ToolSelect {}
+    ToolSelect {
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottomMargin: 24
     }
 }

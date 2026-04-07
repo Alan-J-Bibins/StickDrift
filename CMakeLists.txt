@@ -21,6 +21,11 @@ qt_add_executable(appStickDrift
     app/main.cpp
 )
 
+target_include_directories(appStickDrift PRIVATE 
+    ${CMAKE_CURRENT_SOURCE_DIR}/app
+    ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 qt_add_resources(appStickDrift "app_fonts"
     PREFIX ""
     FILES
@@ -70,6 +75,15 @@ set(qml_singletons
     qml/Theme.qml
 )
 
+set(app_headers
+    app/Constants.h
+    app/EditorState.h
+)
+
+set(app_files
+    app/EditorState.cpp
+)
+
 # https://doc.qt.io/qt-6/qml-singleton.html mentions that QT_QML_SINGLETON_TYPE flag has to be set to true to use Singletons
 set_source_files_properties(${qml_singletons}
     PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
@@ -77,6 +91,7 @@ set_source_files_properties(${qml_singletons}
 qt_add_qml_module(appStickDrift
     URI StickDrift
     QML_FILES ${plain_qml_files} ${qml_singletons}
+    SOURCES ${app_headers} ${app_files}
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
