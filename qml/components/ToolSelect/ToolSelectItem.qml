@@ -10,8 +10,10 @@ Button {
     required property int toolType
 
     onClicked: {
-        console.log("Setting to ", toolType);
-        WorkspaceState.currentTool = toolSelectItem.toolType
+        if(WorkspaceState.currentTool !== toolSelectItem.toolType) {
+            console.log("Setting to ", toolType);
+            WorkspaceState.currentTool = toolSelectItem.toolType
+        }
     }
 
     background: Rectangle {

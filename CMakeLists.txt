@@ -65,6 +65,7 @@ set(plain_qml_files
     qml/common/PrimaryButton.qml
     qml/common/text/BaseText.qml
     qml/common/text/TitleText.qml
+    qml/components/ProjectControl/ProjectControl.qml
     qml/components/ToolSelect/ToolSelect.qml
     qml/components/ToolSelect/ToolSelectItem.qml
     qml/screens/WelcomeScreen.qml
