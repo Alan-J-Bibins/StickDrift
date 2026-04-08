@@ -29,22 +29,40 @@ target_include_directories(appStickDrift PRIVATE
 qt_add_resources(appStickDrift "app_fonts"
     PREFIX ""
     FILES
-        assets/fonts/Satoshi/Satoshi-Black.otf
-        assets/fonts/Satoshi/Satoshi-BlackItalic.otf
-        assets/fonts/Satoshi/Satoshi-Bold.otf
-        assets/fonts/Satoshi/Satoshi-BoldItalic.otf
-        assets/fonts/Satoshi/Satoshi-Light.otf
-        assets/fonts/Satoshi/Satoshi-LightItalic.otf
-        assets/fonts/Satoshi/Satoshi-Medium.otf
-        assets/fonts/Satoshi/Satoshi-MediumItalic.otf
-        assets/fonts/Satoshi/Satoshi-Regular.otf
-        assets/fonts/Satoshi/Satoshi-Italic.otf
-        assets/fonts/ClashDisplay/ClashDisplay-Bold.otf
-        assets/fonts/ClashDisplay/ClashDisplay-Extralight.otf
-        assets/fonts/ClashDisplay/ClashDisplay-Light.otf
-        assets/fonts/ClashDisplay/ClashDisplay-Medium.otf
-        assets/fonts/ClashDisplay/ClashDisplay-Regular.otf
-        assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf
+    assets/fonts/Satoshi/Satoshi-Black.otf
+    assets/fonts/Satoshi/Satoshi-BlackItalic.otf
+    assets/fonts/Satoshi/Satoshi-Bold.otf
+    assets/fonts/Satoshi/Satoshi-BoldItalic.otf
+    assets/fonts/Satoshi/Satoshi-Light.otf
+    assets/fonts/Satoshi/Satoshi-LightItalic.otf
+    assets/fonts/Satoshi/Satoshi-Medium.otf
+    assets/fonts/Satoshi/Satoshi-MediumItalic.otf
+    assets/fonts/Satoshi/Satoshi-Regular.otf
+    assets/fonts/Satoshi/Satoshi-Italic.otf
+    assets/fonts/ClashDisplay/ClashDisplay-Bold.otf
+    assets/fonts/ClashDisplay/ClashDisplay-Extralight.otf
+    assets/fonts/ClashDisplay/ClashDisplay-Light.otf
+    assets/fonts/ClashDisplay/ClashDisplay-Medium.otf
+    assets/fonts/ClashDisplay/ClashDisplay-Regular.otf
+    assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf
+    assets/fonts/AzeretMono/AzeretMono-Black.otf
+    assets/fonts/AzeretMono/AzeretMono-BlackItalic.otf
+    assets/fonts/AzeretMono/AzeretMono-Bold.otf
+    assets/fonts/AzeretMono/AzeretMono-BoldItalic.otf
+    assets/fonts/AzeretMono/AzeretMono-ExtraBold.otf
+    assets/fonts/AzeretMono/AzeretMono-ExtraBoldItalic.otf
+    assets/fonts/AzeretMono/AzeretMono-ExtraLight.otf
+    assets/fonts/AzeretMono/AzeretMono-ExtraLightItalic.otf
+    assets/fonts/AzeretMono/AzeretMono-Italic.otf
+    assets/fonts/AzeretMono/AzeretMono-Light.otf
+    assets/fonts/AzeretMono/AzeretMono-LightItalic.otf
+    assets/fonts/AzeretMono/AzeretMono-Medium.otf
+    assets/fonts/AzeretMono/AzeretMono-MediumItalic.otf
+    assets/fonts/AzeretMono/AzeretMono-Regular.otf
+    assets/fonts/AzeretMono/AzeretMono-SemiBold.otf
+    assets/fonts/AzeretMono/AzeretMono-SemiBoldItalic.otf
+    assets/fonts/AzeretMono/AzeretMono-Thin.otf
+    assets/fonts/AzeretMono/AzeretMono-ThinItalic.otf
 )
 
 qt_add_resources(appStickDrift "app_icons"
@@ -62,9 +80,12 @@ qt_add_resources(appStickDrift "app_icons"
 
 set(plain_qml_files
     qml/Main.qml
+    qml/Theme.qml
     qml/common/PrimaryButton.qml
     qml/common/text/BaseText.qml
+    qml/common/text/MonoText.qml
     qml/common/text/TitleText.qml
+    qml/components/AttributeControl/AttributeControl.qml
     qml/components/ProjectControl/ProjectControl.qml
     qml/components/ToolSelect/ToolSelect.qml
     qml/components/ToolSelect/ToolSelectItem.qml

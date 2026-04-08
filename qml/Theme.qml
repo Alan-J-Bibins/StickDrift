@@ -32,6 +32,26 @@ QtObject {
     readonly property FontLoader _hf5: FontLoader {source: "/assets/fonts/ClashDisplay/ClashDisplay-Regular.otf"}
     readonly property FontLoader _hf6: FontLoader {source: "/assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf"}
 
+    readonly property FontLoader _mf1: FontLoader {source: "/assets/fonts/AzeretMono/AzeretMono-Black.otf"}
+    readonly property FontLoader _mf2: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-BlackItalic.otf"}
+    readonly property FontLoader _mf3: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-Bold.otf"}
+    readonly property FontLoader _mf4: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-BoldItalic.otf"}
+    readonly property FontLoader _mf5: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-ExtraBold.otf"}
+    readonly property FontLoader _mf6: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-ExtraBoldItalic.otf"}
+    readonly property FontLoader _mf7: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-ExtraLight.otf"}
+    readonly property FontLoader _mf8: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-ExtraLightItalic.otf"}
+    readonly property FontLoader _mf9: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-Italic.otf"}
+    readonly property FontLoader _mf10: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-Light.otf"}
+    readonly property FontLoader _mf11: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-LightItalic.otf"}
+    readonly property FontLoader _mf12: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-Medium.otf"}
+    readonly property FontLoader _mf13: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-MediumItalic.otf"}
+    readonly property FontLoader _mf14: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-Regular.otf"}
+    readonly property FontLoader _mf15: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-SemiBold.otf"}
+    readonly property FontLoader _mf16: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-SemiBoldItalic.otf"}
+    readonly property FontLoader _mf17: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-Thin.otf"}
+    readonly property FontLoader _mf18: FontLoader {source: "../assets/fonts/AzeretMono/AzeretMono-ThinItalic.otf"}
+
     readonly property string baseFontFamily: _bf1.name
     readonly property string titleFontFamily: _hf1.name
+    readonly property string monoFontFamily: _mf1.name
 }
