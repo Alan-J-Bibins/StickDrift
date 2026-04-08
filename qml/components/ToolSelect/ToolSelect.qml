@@ -6,7 +6,18 @@ Rectangle {
     implicitHeight: toolSelectRow.height
     color: Theme.background_2
     border.width: 1
-    border.color: Theme.text
+    border.color: mouse.hovered ? Theme.text : Qt.alpha(Theme.text, 0.2)
+
+    HoverHandler {
+        id: mouse
+        acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
+    }
+
+    Behavior on border.color {
+        ColorAnimation {
+            duration: 100
+        }
+    }
 
     Row {
         id: toolSelectRow
