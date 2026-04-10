@@ -80,8 +80,9 @@ qt_add_resources(appStickDrift "app_icons"
 
 set(plain_qml_files
     qml/Main.qml
-    qml/Theme.qml
     qml/common/PrimaryButton.qml
+    qml/common/input/ColorInput.qml
+    qml/common/label/Label.qml
     qml/common/text/BaseText.qml
     qml/common/text/MonoText.qml
     qml/common/text/TitleText.qml

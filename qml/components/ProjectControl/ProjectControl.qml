@@ -47,6 +47,7 @@ Rectangle {
         anchors.fill: parent
         padding: 12
         spacing: 12
+
         TitleText{
             textLabel.text: "Untitled"
             textLabel.font.pixelSize: 24

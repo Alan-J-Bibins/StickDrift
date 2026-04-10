@@ -10,16 +10,33 @@ Item {
         color: Theme.background_1
     }
 
+
     WorkspaceEngine {
         id: engine
         anchors.fill: parent
         zoom: 1.0
+        workspaceBackgroundColor: WorkspaceState.workspaceBackgroundColor
+        TapHandler {
+            onTapped: workspaceScreen.forceActiveFocus()
+        }
     }
 
     ProjectControl {
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.bottom: parent.bottom
+        TapHandler {
+            onTapped: workspaceScreen.forceActiveFocus()
+        }
+    }
+
+    AttributeControl {
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        TapHandler {
+            onTapped: workspaceScreen.forceActiveFocus()
+        }
     }
 
     ToolSelect {

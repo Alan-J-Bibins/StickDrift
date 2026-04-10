@@ -1,6 +1,7 @@
 #include "WorkspaceEngine.h"
 #include <QSGNode>
 #include <QQuickItem>
+#include <QSGSimpleRectNode>
 
 WorkspaceEngine::WorkspaceEngine(QQuickItem *parent)
     : QQuickItem(parent)
@@ -11,6 +12,14 @@ WorkspaceEngine::WorkspaceEngine(QQuickItem *parent)
     
     // Enable mouse/wheel events for this item
     setAcceptedMouseButtons(Qt::LeftButton | Qt::RightButton);
+}
+
+void WorkspaceEngine::setWorkspaceBackgroundColor(const QColor &color) {
+    if(m_workspaceBackgroundColor != color) {
+        m_workspaceBackgroundColor = color;
+        emit workspaceBackgroundColorChanged();
+        update();
+    }
 }
 
 void WorkspaceEngine::setZoom(float z) {
@@ -34,6 +43,14 @@ void WorkspaceEngine::wheelEvent(QWheelEvent *event) {
 }
 
 QSGNode *WorkspaceEngine::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData *) {
-    // For now, return the oldNode (or nullptr) to stop the linker complaining
-    return oldNode;
+    QSGSimpleRectNode *node = static_cast<QSGSimpleRectNode *>(oldNode);
+
+    if(!node) {
+        node = new QSGSimpleRectNode();
+    }
+
+    node->setRect(boundingRect());
+    node->setColor(m_workspaceBackgroundColor);
+
+    return node;
 }
