@@ -76,6 +76,7 @@ qt_add_resources(appStickDrift "app_icons"
     assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Scale.svg
     assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Section.svg
     assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Select.svg
+    assets/icons/ProjectControl/more_vert.svg
 )
 
 set(plain_qml_files

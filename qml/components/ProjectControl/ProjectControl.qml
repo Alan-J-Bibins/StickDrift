@@ -1,4 +1,6 @@
 import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
 
 Rectangle {
     id: projectControl
@@ -48,12 +50,71 @@ Rectangle {
         padding: 12
         spacing: 12
 
-        TitleText{
-            textLabel.text: "Untitled"
-            textLabel.font.pixelSize: 24
-            textLabel.font.weight: 500
-            textLabel.color: Theme.text
+        RowLayout {
+            spacing: 8
+            width: parent.width - (parent.padding * 2)
+            TitleText{
+                textLabel.text: "Untitled"
+                textLabel.font.pixelSize: 24
+                textLabel.font.weight: 500
+                textLabel.color: Theme.text
+            }
+
+            Item {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+            }
+
+            Button {
+                id: projectMenuTrigger
+                padding: 4
+                onClicked: {
+                    projectMenu.popup()
+                }
+
+                background: Rectangle {
+                    border.width: 1
+                    border.color: projectMenuTrigger.hovered ? Qt.alpha(Theme.text, 0.2) : "transparent"
+                    color: projectMenuTrigger.hovered ? Qt.alpha(Theme.text, 0.1) : "transparent"
+
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 100
+                        }
+                    }
+
+                    Behavior on border.color {
+                        ColorAnimation {
+                            duration: 100
+                        }
+                    }
+                }
+
+                contentItem: Image {
+                    smooth: true
+                    anchors.centerIn: parent
+                    source: "qrc:/assets/icons/ProjectControl/more_vert.svg"
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.height: 24
+                    sourceSize.width: 24
+
+                }
+
+                Menu {
+                    id: projectMenu
+                    y: projectMenuTrigger.height + (projectMenuTrigger.padding * 2)
+                    x: projectMenuTrigger.width + (projectMenuTrigger.padding * 2)
+                    closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+                    popupType: Popup.Item
+                    MenuItem {
+                        BaseText {
+                            textLabel.text: "Save"
+                        }
+                    }
+                }
+            }
         }
+
 
         Rectangle {
             height: 1
