@@ -87,11 +87,14 @@ set(plain_qml_files
     qml/common/text/MonoText.qml
     qml/common/text/TitleText.qml
     qml/components/AttributeControl/AttributeControl.qml
+    qml/components/ProjectControl/LayersPanel.qml
+    qml/components/ProjectControl/PagesPanel.qml
     qml/components/ProjectControl/ProjectControl.qml
     qml/components/ToolSelect/ToolSelect.qml
     qml/components/ToolSelect/ToolSelectItem.qml
     qml/screens/WelcomeScreen.qml
     qml/screens/WorkspaceScreen.qml
+    qml/tools/SelectTool.qml
 )
 
 set(qml_singletons

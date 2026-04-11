@@ -62,6 +62,18 @@ Rectangle {
             anchors.left: parent.left
             width: parent.width
         }
+
+        PagesPanel {}
+
+        Rectangle {
+            height: 1
+            color: Theme.text
+            opacity: 0.2
+            anchors.left: parent.left
+            width: parent.width
+        }
+
+        LayersPanel {}
     }
 
 }

@@ -21,6 +21,11 @@ Item {
         }
     }
 
+    SelectTool {
+        anchors.fill: parent
+        enabled: WorkspaceState.currentTool === WorkspaceTool.Select
+    }
+
     ProjectControl {
         anchors.left: parent.left
         anchors.top: parent.top
