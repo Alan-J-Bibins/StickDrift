@@ -7,7 +7,7 @@
 
 class WorkspaceEngine : public QQuickItem {
     Q_OBJECT
-    Q_PROPERTY(WorkspaceState *state READ state WRITE setState NOTIFY stateChanged())
+    Q_PROPERTY(WorkspaceState *state READ state WRITE setState NOTIFY stateChanged)
     QML_ELEMENT
 
   public:
@@ -21,11 +21,10 @@ class WorkspaceEngine : public QQuickItem {
     void mousePressEvent(QMouseEvent *event) override;
 
   signals:
-    void workspaceBackgroundColorChanged();
     void stateChanged();
 
   private:
-    WorkspaceState *m_state;
+    WorkspaceState *m_state = nullptr;
     void syncNodes(SceneNode *logicalNode, QSGNode *renderParent);
 };
 

@@ -14,8 +14,7 @@ Item {
     WorkspaceEngine {
         id: engine
         anchors.fill: parent
-        zoom: 1.0
-        workspaceBackgroundColor: WorkspaceState.workspaceBackgroundColor
+        state: WorkspaceState
         TapHandler {
             onTapped: workspaceScreen.forceActiveFocus()
         }

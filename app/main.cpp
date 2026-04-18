@@ -1,4 +1,3 @@
-#include "WorkspaceState.h"
 #include <QDebug>
 #include <QDirIterator>
 #include <QGuiApplication>
@@ -18,12 +17,5 @@ int main(int argc, char *argv[]) {
     // }
     //
     // main.cpp
-
-    auto state = WorkspaceState::instance();
-    auto rect = new RectangleNode(200, 150);
-    rect->x = 100;
-    rect->y = 100;
-    rect->setColor(new QColor("red")); // Using your current pointer setter
-    state->graph()->root()->children.append(rect);
     return app.exec();
 }

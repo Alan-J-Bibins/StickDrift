@@ -4,7 +4,7 @@
 #include <QSGNode>
 #include <QSGSimpleRectNode>
 
-WorkspaceEngine::WorkspaceEngine(QQuickItem *parent) : QQuickItem(parent) {
+WorkspaceEngine::WorkspaceEngine(QQuickItem *parent) : QQuickItem(parent), m_state(nullptr) {
     // Important: Custom QQuickItems that use updatePaintNode
     // MUST set this flag, or the engine will never call it.
     setFlag(ItemHasContents);
@@ -13,16 +13,23 @@ WorkspaceEngine::WorkspaceEngine(QQuickItem *parent) : QQuickItem(parent) {
     setAcceptedMouseButtons(Qt::LeftButton | Qt::RightButton);
     setState(WorkspaceState::instance());
 }
+WorkspaceState *WorkspaceEngine::state() const { return m_state; };
 
 void WorkspaceEngine::mousePressEvent(QMouseEvent *event) {
     // We'll handle panning/selection logic here later
+    qDebug() << "Mouse pressed at:" << event->position() << "with zoom:" << m_state->zoom();
+
+    // It handles Qt types like magic:
+    qDebug() << "Current BG Color:" << m_state->workspaceBackgroundColor();
     event->accept();
 }
 
 void WorkspaceEngine::wheelEvent(QWheelEvent *event) {
     if (!m_state)
         return;
-    float delta = event->angleDelta().y() > 0 ? 1.1f : 0.9f;
+    float delta = event->angleDelta().y() > 0 ? 1.5f : 0.5f;
+    qDebug() << "Current BG Color:" << m_state->workspaceBackgroundColor();
+    qDebug() << "Current delta" << delta;
     m_state->setZoom(m_state->zoom() * delta);
     event->accept();
 }
@@ -46,8 +53,10 @@ void WorkspaceEngine::setState(WorkspaceState *state) {
 }
 
 QSGNode *WorkspaceEngine::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData *) {
-    if (!m_state)
+
+    if (!m_state || !m_state->graph() || !m_state->graph()->root()) {
         return oldNode;
+    }
 
     QSGNode *root = oldNode ? oldNode : new QSGNode();
 

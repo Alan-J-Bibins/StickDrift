@@ -1,6 +1,5 @@
 #include "WorkspaceState.h"
 #include <QQuickItem>
-#include <qpoint.h>
 
 WorkspaceState *WorkspaceState::instance() {
     static WorkspaceState *res = new WorkspaceState();
