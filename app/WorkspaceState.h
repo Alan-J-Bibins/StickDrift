@@ -3,7 +3,6 @@
 
 #include "Constants.h"
 #include "SceneGraph.h"
-#include "SceneNode.h"
 #include <QColor>
 #include <QObject>
 #include <QPoint>
@@ -46,18 +45,8 @@ class WorkspaceState : public QObject {
     SceneGraph *graph() const;
 
   public slots:
-    void setCurrentTool(StickDrift::ToolType tool) {
-        if (m_currentTool == tool)
-            return;
-        m_currentTool = tool;
-        emit currentToolChanged();
-    }
-    void createRectangle(int x, int y, int width, int height) {
-        auto rect = new RectangleNode(x, y, width, height);
-        m_graph->root()->children.append(rect);
-        emit graphChanged();
-    }
-
+    void setCurrentTool(StickDrift::ToolType tool);
+    void createRectangle(int x, int y, int width, int height);
   signals:
     void currentToolChanged();
     void workspaceBackgroundColorChanged();
@@ -71,6 +60,7 @@ class WorkspaceState : public QObject {
     float m_zoom;
     QPointF m_pan;
     SceneGraph *m_graph;
+    QPointF mapToWorld(QPointF screenPos);
 };
 
 #endif

@@ -30,3 +30,17 @@ void WorkspaceState::setPan(QPointF pan) {
 QPointF WorkspaceState::pan() const { return m_pan; }
 float WorkspaceState::zoom() const { return m_zoom; }
 SceneGraph *WorkspaceState::graph() const { return m_graph; }
+
+void WorkspaceState::createRectangle(int x, int y, int width, int height) {
+    auto rect = new RectangleNode(x, y, width, height);
+    m_graph->root()->children.append(rect);
+    emit graphChanged();
+}
+void WorkspaceState::setCurrentTool(StickDrift::ToolType tool) {
+    if (m_currentTool == tool)
+        return;
+    m_currentTool = tool;
+    emit currentToolChanged();
+}
+
+QPointF WorkspaceState::mapToWorld(QPointF screenPos) { return (screenPos - m_pan) / m_zoom; }
