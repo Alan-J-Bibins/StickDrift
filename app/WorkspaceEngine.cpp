@@ -4,15 +4,6 @@
 #include <QSGNode>
 #include <QSGSimpleRectNode>
 
-WorkspaceEngine::WorkspaceEngine(QQuickItem *parent) : QQuickItem(parent), m_state(nullptr) {
-    // Important: Custom QQuickItems that use updatePaintNode
-    // MUST set this flag, or the engine will never call it.
-    setFlag(ItemHasContents);
-
-    // Enable mouse/wheel events for this item
-    setAcceptedMouseButtons(Qt::LeftButton | Qt::RightButton);
-    setState(WorkspaceState::instance());
-}
 WorkspaceState *WorkspaceEngine::state() const { return m_state; };
 
 void WorkspaceEngine::mousePressEvent(QMouseEvent *event) {
