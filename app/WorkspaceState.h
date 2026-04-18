@@ -3,6 +3,7 @@
 
 #include "Constants.h"
 #include "SceneGraph.h"
+#include "SceneNode.h"
 #include <QColor>
 #include <QObject>
 #include <QPoint>
@@ -51,12 +52,18 @@ class WorkspaceState : public QObject {
         m_currentTool = tool;
         emit currentToolChanged();
     }
+    void createRectangle(int x, int y, int width, int height) {
+        auto rect = new RectangleNode(x, y, width, height);
+        m_graph->root()->children.append(rect);
+        emit graphChanged();
+    }
 
   signals:
     void currentToolChanged();
     void workspaceBackgroundColorChanged();
     void zoomChanged();
     void panChanged();
+    void graphChanged();
 
   private:
     StickDrift::ToolType m_currentTool;

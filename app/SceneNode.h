@@ -16,6 +16,7 @@ enum class SceneNodeType {
 class SceneNode {
   public:
     SceneNode() : isDirty(true), x(0), y(0) {}
+    SceneNode(int x, int y) : isDirty(true), x(x), y(y) {}
 
     virtual ~SceneNode() { qDeleteAll(children); }
 
@@ -32,8 +33,9 @@ class SceneNode {
 
 class RectangleNode : public SceneNode {
   public:
-    RectangleNode() : SceneNode(), m_width(100), m_height(0), m_color(QColor("#FFFFFF")) {}
+    RectangleNode() : SceneNode(), m_width(100), m_height(100), m_color(QColor("#FFFFFF")) {}
     RectangleNode(int width, int height) : SceneNode(), m_width(width), m_height(height), m_color(QColor("#FFFFFF")) {}
+    RectangleNode(int x, int y, int width, int height) : SceneNode(x, y), m_width(width), m_height(height), m_color(QColor("#FFFFFF")) {}
     SceneNodeType type() const override { return SceneNodeType::Rectangle; }
 
     void setColor(const QColor *color);

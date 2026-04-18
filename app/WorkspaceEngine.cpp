@@ -46,6 +46,7 @@ void WorkspaceEngine::setState(WorkspaceState *state) {
         connect(m_state, &WorkspaceState::zoomChanged, this, &QQuickItem::update);
         connect(m_state, &WorkspaceState::panChanged, this, &QQuickItem::update);
         connect(m_state, &WorkspaceState::workspaceBackgroundColorChanged, this, &QQuickItem::update);
+        connect(m_state, &WorkspaceState::graphChanged, this, &QQuickItem::update);
     }
 
     emit stateChanged();

@@ -10,7 +10,6 @@ Item {
         color: Theme.background_1
     }
 
-
     WorkspaceEngine {
         id: engine
         anchors.fill: parent
@@ -23,6 +22,11 @@ Item {
     SelectTool {
         anchors.fill: parent
         enabled: WorkspaceState.currentTool === WorkspaceTool.Select
+    }
+
+    RectangleTool {
+        anchors.fill: parent
+        enabled: WorkspaceState.currentTool === WorkspaceTool.Polygon
     }
 
     ProjectControl {

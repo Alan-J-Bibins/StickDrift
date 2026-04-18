@@ -96,6 +96,7 @@ set(plain_qml_files
     qml/components/ToolSelect/ToolSelectItem.qml
     qml/screens/WelcomeScreen.qml
     qml/screens/WorkspaceScreen.qml
+    qml/tools/RectangleTool.qml
     qml/tools/SelectTool.qml
 )
 
