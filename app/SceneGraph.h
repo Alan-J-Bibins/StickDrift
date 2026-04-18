@@ -10,7 +10,11 @@ class SceneGraph : public QObject {
     SceneNode *m_root;
 
   public:
-    explicit SceneGraph(QObject *parent = nullptr) : QObject(parent) { m_root = new SceneNode(); }
+    explicit SceneGraph(QObject *parent = nullptr) : QObject(parent) {
+        m_root = new SceneNode();
+        BackgroundNode *background = new BackgroundNode();
+        m_root->children.append(background);
+    }
     ~SceneGraph() { delete m_root; }
     SceneNode *root() const;
 };

@@ -9,6 +9,13 @@ WorkspaceState *WorkspaceState::instance() {
 void WorkspaceState::setWorkspaceBackgroundColor(const QColor &color) {
     if (m_workspaceBackgroundColor != color) {
         m_workspaceBackgroundColor = color;
+        for (auto node : m_graph->root()->children) {
+            if (node->type() == SceneNodeType::Background) {
+                static_cast<BackgroundNode *>(node)->setColor(color);
+                break;
+            }
+        }
+
         emit workspaceBackgroundColorChanged();
     }
 }

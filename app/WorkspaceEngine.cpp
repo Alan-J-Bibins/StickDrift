@@ -3,6 +3,7 @@
 #include <QQuickItem>
 #include <QSGNode>
 #include <QSGSimpleRectNode>
+#include <qsgsimplerectnode.h>
 
 WorkspaceEngine::WorkspaceEngine(QQuickItem *parent) : QQuickItem(parent), m_state(nullptr) {
     // Important: Custom QQuickItems that use updatePaintNode
@@ -89,6 +90,19 @@ QSGNode *WorkspaceEngine::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData 
 
 void WorkspaceEngine::syncNodes(SceneNode *logicalNode, QSGNode *renderParent) {
     for (SceneNode *child : logicalNode->children) {
+
+        if (!child)
+            continue;
+
+        if (child->type() == SceneNodeType::Background) {
+            BackgroundNode *background = static_cast<BackgroundNode *>(child);
+            QSGSimpleRectNode *hwNode = new QSGSimpleRectNode();
+
+            hwNode->setRect(0, 0, width(), height());
+            hwNode->setColor(background->color());
+            renderParent->appendChildNode(hwNode);
+        }
+
         if (child->type() == SceneNodeType::Rectangle) {
             RectangleNode *rect = static_cast<RectangleNode *>(child);
 
