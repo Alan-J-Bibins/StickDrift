@@ -53,6 +53,10 @@ Rectangle {
             toolType: WorkspaceTool.Section
         }
         ToolSelectItem {
+            iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Text.svg"
+            toolType: WorkspaceTool.Text
+        }
+        ToolSelectItem {
             iconSource: "qrc:assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Pencil.svg"
             toolType: WorkspaceTool.Pencil
         }

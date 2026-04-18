@@ -75,6 +75,7 @@ qt_add_resources(appStickDrift "app_icons"
     assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Polygon.svg
     assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Scale.svg
     assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Section.svg
+    assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Text.svg
     assets/icons/ToolSelectItemIcon/ToolSelectItemIcon-Select.svg
     assets/icons/ProjectControl/more_vert.svg
 )
@@ -104,13 +105,18 @@ set(qml_singletons
 
 set(app_headers
     app/Constants.h
-    app/WorkspaceState.h
+    app/SceneGraph.h
+    app/SceneNode.h
     app/WorkspaceEngine.h
+    app/WorkspaceState.h
 )
 
 set(app_files
-    app/WorkspaceState.cpp
+    app/SceneGraph.cpp
+    app/SceneNode.cpp
     app/WorkspaceEngine.cpp
+    app/WorkspaceState.cpp
+    app/main.cpp
 )
 
 # https://doc.qt.io/qt-6/qml-singleton.html mentions that QT_QML_SINGLETON_TYPE flag has to be set to true to use Singletons

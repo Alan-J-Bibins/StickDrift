@@ -31,12 +31,13 @@ we have the tools for 3D modelling and design too, then why not have a platform 
 
 ## Development timeline
 
-### Phase 1: Get the base thing working (Workspace + 2D UI Design essentials)
+### Phase 1: Get the basic thing working (Workspace + 2D UI Design essentials)
 - [ ] Design file schema
 - [ ] Welcome Screen
 - [ ] Create Design File
 - [ ] Setup Workspace (Singular Page for now)
     - [ ] Essential Tools
+        - [ ] Select Tool
         - [ ] Move Tool
         - [ ] Scale Tool
         - [ ] Frame Tool

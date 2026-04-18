@@ -17,9 +17,10 @@ enum class ToolType {
     Polygon,
     Ellipse,
     Section,
+    Text,
     Pencil,
 };
 Q_ENUM_NS(ToolType)
-}
+} // namespace StickDrift
 
 #endif // CONSTANTS_H
