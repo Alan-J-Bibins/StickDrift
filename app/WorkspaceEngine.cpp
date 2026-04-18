@@ -3,7 +3,6 @@
 #include <QQuickItem>
 #include <QSGNode>
 #include <QSGSimpleRectNode>
-#include <qsgsimplerectnode.h>
 
 WorkspaceEngine::WorkspaceEngine(QQuickItem *parent) : QQuickItem(parent), m_state(nullptr) {
     // Important: Custom QQuickItems that use updatePaintNode
@@ -28,7 +27,7 @@ void WorkspaceEngine::mousePressEvent(QMouseEvent *event) {
 void WorkspaceEngine::wheelEvent(QWheelEvent *event) {
     if (!m_state)
         return;
-    float delta = event->angleDelta().y() > 0 ? 1.5f : 0.5f;
+    float delta = event->angleDelta().y() > 0 ? 1.2f : 0.8f;
     qDebug() << "Current BG Color:" << m_state->workspaceBackgroundColor();
     qDebug() << "Current delta" << delta;
     m_state->setZoom(m_state->zoom() * delta);
@@ -61,13 +60,24 @@ QSGNode *WorkspaceEngine::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData 
 
     QSGNode *root = oldNode ? oldNode : new QSGNode();
 
+    QSGSimpleRectNode *background = nullptr;
+    if (root->childCount() == 0) {
+        background = new QSGSimpleRectNode();
+        root->appendChildNode(background);
+    } else {
+        background = static_cast<QSGSimpleRectNode *>(root->firstChild());
+    }
+
+    background->setRect(0, 0, width(), height());
+    background->setColor(m_state->workspaceBackgroundColor());
+
     // 1. Viewport Transform (Zoom/Pan)
     QSGTransformNode *viewport = nullptr;
-    if (root->childCount() == 0) {
+    if (root->childCount() == 1) {
         viewport = new QSGTransformNode();
         root->appendChildNode(viewport);
     } else {
-        viewport = static_cast<QSGTransformNode *>(root->firstChild());
+        viewport = static_cast<QSGTransformNode *>(root->childAtIndex(1));
     }
 
     QMatrix4x4 matrix;
@@ -93,15 +103,6 @@ void WorkspaceEngine::syncNodes(SceneNode *logicalNode, QSGNode *renderParent) {
 
         if (!child)
             continue;
-
-        if (child->type() == SceneNodeType::Background) {
-            BackgroundNode *background = static_cast<BackgroundNode *>(child);
-            QSGSimpleRectNode *hwNode = new QSGSimpleRectNode();
-
-            hwNode->setRect(0, 0, width(), height());
-            hwNode->setColor(background->color());
-            renderParent->appendChildNode(hwNode);
-        }
 
         if (child->type() == SceneNodeType::Rectangle) {
             RectangleNode *rect = static_cast<RectangleNode *>(child);

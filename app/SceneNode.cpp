@@ -26,11 +26,3 @@ void RectangleNode::setHeight(const int *height) {
 int RectangleNode::width() const { return m_width; }
 int RectangleNode::height() const { return m_height; }
 QColor RectangleNode::color() const { return m_color; }
-
-QColor BackgroundNode::color() const { return m_color; }
-void BackgroundNode::setColor(const QColor &color) {
-    if (m_color != color) {
-        m_color = color;
-        markDirty();
-    }
-}

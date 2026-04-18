@@ -7,7 +7,6 @@
 
 enum class SceneNodeType {
     Base,
-    Background,
     Rectangle,
     Frame,
     Canvas,
@@ -48,18 +47,6 @@ class RectangleNode : public SceneNode {
     QColor m_color;
     int m_width;
     int m_height;
-};
-
-class BackgroundNode : public SceneNode {
-  public:
-    BackgroundNode() : SceneNode(), m_color(QColor("#FF0000")) {}
-    SceneNodeType type() const override { return SceneNodeType::Background; }
-
-    QColor color() const;
-    void setColor(const QColor &color);
-
-  private:
-    QColor m_color;
 };
 
 #endif // !DEBUG
