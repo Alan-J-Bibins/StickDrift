@@ -1,0 +1,1722 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "ajb.sh",
+      "file_type": "code",
+      "source_file": "ajb.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "ajb_sh",
+      "community": 5,
+      "norm_label": "ajb.sh"
+    },
+    {
+      "label": "ajb.sh script",
+      "file_type": "code",
+      "source_file": "ajb.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "home_alan_ajb_projects_stickdrift_ajb_sh__entry",
+      "community": 5,
+      "norm_label": "ajb.sh script"
+    },
+    {
+      "label": "do_configure()",
+      "file_type": "code",
+      "source_file": "ajb.sh",
+      "source_location": "L8",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "id": "stickdrift_ajb_do_configure",
+      "community": 5,
+      "norm_label": "do_configure()"
+    },
+    {
+      "label": "do_build()",
+      "file_type": "code",
+      "source_file": "ajb.sh",
+      "source_location": "L17",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "id": "stickdrift_ajb_do_build",
+      "community": 5,
+      "norm_label": "do_build()"
+    },
+    {
+      "label": "do_clean()",
+      "file_type": "code",
+      "source_file": "ajb.sh",
+      "source_location": "L26",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "id": "stickdrift_ajb_do_clean",
+      "community": 5,
+      "norm_label": "do_clean()"
+    },
+    {
+      "label": "do_run()",
+      "file_type": "code",
+      "source_file": "ajb.sh",
+      "source_location": "L31",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "id": "stickdrift_ajb_do_run",
+      "community": 5,
+      "norm_label": "do_run()"
+    },
+    {
+      "label": "do_clean_vcpkg()",
+      "file_type": "code",
+      "source_file": "ajb.sh",
+      "source_location": "L36",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "id": "stickdrift_ajb_do_clean_vcpkg",
+      "community": 5,
+      "norm_label": "do_clean_vcpkg()"
+    },
+    {
+      "label": "vcpkg.json",
+      "file_type": "code",
+      "source_file": "vcpkg.json",
+      "source_location": "L1",
+      "id": "vcpkg_json",
+      "community": 8,
+      "norm_label": "vcpkg.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "vcpkg.json",
+      "source_location": "L2",
+      "id": "stickdrift_vcpkg_name",
+      "community": 8,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "vcpkg.json",
+      "source_location": "L3",
+      "id": "stickdrift_vcpkg_version",
+      "community": 8,
+      "norm_label": "version"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "vcpkg.json",
+      "source_location": "L4",
+      "id": "stickdrift_vcpkg_dependencies",
+      "community": 8,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "vcpkg-configuration.json",
+      "file_type": "code",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L1",
+      "id": "vcpkg_configuration_json",
+      "community": 7,
+      "norm_label": "vcpkg-configuration.json"
+    },
+    {
+      "label": "default-registry",
+      "file_type": "code",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L2",
+      "id": "stickdrift_vcpkg_configuration_default_registry",
+      "community": 7,
+      "norm_label": "default-registry"
+    },
+    {
+      "label": "kind",
+      "file_type": "code",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L3",
+      "id": "stickdrift_vcpkg_configuration_default_registry_kind",
+      "community": 7,
+      "norm_label": "kind"
+    },
+    {
+      "label": "baseline",
+      "file_type": "code",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L4",
+      "id": "stickdrift_vcpkg_configuration_default_registry_baseline",
+      "community": 7,
+      "norm_label": "baseline"
+    },
+    {
+      "label": "repository",
+      "file_type": "code",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L5",
+      "id": "stickdrift_vcpkg_configuration_default_registry_repository",
+      "community": 7,
+      "norm_label": "repository"
+    },
+    {
+      "label": "registries",
+      "file_type": "code",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L7",
+      "id": "stickdrift_vcpkg_configuration_registries",
+      "community": 7,
+      "norm_label": "registries"
+    },
+    {
+      "label": "InputHandler.h",
+      "file_type": "code",
+      "source_file": "app/InputHandler.h",
+      "source_location": "L1",
+      "id": "app_inputhandler_h",
+      "community": 1,
+      "norm_label": "inputhandler.h"
+    },
+    {
+      "label": "InputHandler()",
+      "file_type": "code",
+      "source_file": "app/InputHandler.h",
+      "source_location": "L6",
+      "id": "app_inputhandler_inputhandler",
+      "community": 1,
+      "norm_label": "inputhandler()"
+    },
+    {
+      "label": "SceneGraph.cpp",
+      "file_type": "code",
+      "source_file": "app/SceneGraph.cpp",
+      "source_location": "L1",
+      "id": "app_scenegraph_cpp",
+      "community": 4,
+      "norm_label": "scenegraph.cpp"
+    },
+    {
+      "label": "root()",
+      "file_type": "code",
+      "source_file": "app/SceneGraph.cpp",
+      "source_location": "L4",
+      "id": "app_scenegraph_root",
+      "community": 4,
+      "norm_label": "root()"
+    },
+    {
+      "label": "SceneGraph.h",
+      "file_type": "code",
+      "source_file": "app/SceneGraph.h",
+      "source_location": "L1",
+      "id": "app_scenegraph_h",
+      "community": 4,
+      "norm_label": "scenegraph.h"
+    },
+    {
+      "label": "SceneGraph()",
+      "file_type": "code",
+      "source_file": "app/SceneGraph.h",
+      "source_location": "L6",
+      "id": "app_scenegraph_scenegraph",
+      "community": 4,
+      "norm_label": "scenegraph()"
+    },
+    {
+      "label": "Constants.h",
+      "file_type": "code",
+      "source_file": "app/Constants.h",
+      "source_location": "L1",
+      "id": "app_constants_h",
+      "community": 1,
+      "norm_label": "constants.h"
+    },
+    {
+      "label": "WorkspaceState.h",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.h",
+      "source_location": "L1",
+      "id": "app_workspacestate_h",
+      "community": 1,
+      "norm_label": "workspacestate.h"
+    },
+    {
+      "label": "WorkspaceState()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.h",
+      "source_location": "L14",
+      "id": "app_workspacestate_workspacestate",
+      "community": 1,
+      "norm_label": "workspacestate()"
+    },
+    {
+      "label": "WorkspaceState.cpp",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L1",
+      "id": "app_workspacestate_cpp",
+      "community": 2,
+      "norm_label": "workspacestate.cpp"
+    },
+    {
+      "label": "instance()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L4",
+      "id": "app_workspacestate_instance",
+      "community": 2,
+      "norm_label": "instance()"
+    },
+    {
+      "label": "setWorkspaceBackgroundColor()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L9",
+      "id": "app_workspacestate_setworkspacebackgroundcolor",
+      "community": 2,
+      "norm_label": "setworkspacebackgroundcolor()"
+    },
+    {
+      "label": "setZoom()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L16",
+      "id": "app_workspacestate_setzoom",
+      "community": 2,
+      "norm_label": "setzoom()"
+    },
+    {
+      "label": "setPan()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L28",
+      "id": "app_workspacestate_setpan",
+      "community": 2,
+      "norm_label": "setpan()"
+    },
+    {
+      "label": "pan()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L35",
+      "id": "app_workspacestate_pan",
+      "community": 2,
+      "norm_label": "pan()"
+    },
+    {
+      "label": "zoom()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L36",
+      "id": "app_workspacestate_zoom",
+      "community": 2,
+      "norm_label": "zoom()"
+    },
+    {
+      "label": "graph()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L37",
+      "id": "app_workspacestate_graph",
+      "community": 2,
+      "norm_label": "graph()"
+    },
+    {
+      "label": "setCurrentTool()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L39",
+      "id": "app_workspacestate_setcurrenttool",
+      "community": 2,
+      "norm_label": "setcurrenttool()"
+    },
+    {
+      "label": "mapToWorld()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L46",
+      "id": "app_workspacestate_maptoworld",
+      "community": 2,
+      "norm_label": "maptoworld()"
+    },
+    {
+      "label": "createRectangle()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L48",
+      "id": "app_workspacestate_createrectangle",
+      "community": 2,
+      "norm_label": "createrectangle()"
+    },
+    {
+      "label": "WorkspaceEngine.h",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.h",
+      "source_location": "L1",
+      "id": "app_workspaceengine_h",
+      "community": 1,
+      "norm_label": "workspaceengine.h"
+    },
+    {
+      "label": "WorkspaceEngine()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.h",
+      "source_location": "L9",
+      "id": "app_workspaceengine_workspaceengine",
+      "community": 1,
+      "norm_label": "workspaceengine()"
+    },
+    {
+      "label": "SceneNode.h",
+      "file_type": "code",
+      "source_file": "app/SceneNode.h",
+      "source_location": "L1",
+      "id": "app_scenenode_h",
+      "community": 4,
+      "norm_label": "scenenode.h"
+    },
+    {
+      "label": "SceneNode()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.h",
+      "source_location": "L16",
+      "id": "app_scenenode_scenenode",
+      "community": 4,
+      "norm_label": "scenenode()"
+    },
+    {
+      "label": "type()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.h",
+      "source_location": "L23",
+      "id": "app_scenenode_type",
+      "community": 4,
+      "norm_label": "type()"
+    },
+    {
+      "label": "SceneNode.cpp",
+      "file_type": "code",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L1",
+      "id": "app_scenenode_cpp",
+      "community": 6,
+      "norm_label": "scenenode.cpp"
+    },
+    {
+      "label": "markDirty()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L3",
+      "id": "app_scenenode_markdirty",
+      "community": 6,
+      "norm_label": "markdirty()"
+    },
+    {
+      "label": "setColor()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L5",
+      "id": "app_scenenode_setcolor",
+      "community": 6,
+      "norm_label": "setcolor()"
+    },
+    {
+      "label": "setWidth()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L12",
+      "id": "app_scenenode_setwidth",
+      "community": 6,
+      "norm_label": "setwidth()"
+    },
+    {
+      "label": "setHeight()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L19",
+      "id": "app_scenenode_setheight",
+      "community": 6,
+      "norm_label": "setheight()"
+    },
+    {
+      "label": "width()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L26",
+      "id": "app_scenenode_width",
+      "community": 0,
+      "norm_label": "width()"
+    },
+    {
+      "label": "height()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L27",
+      "id": "app_scenenode_height",
+      "community": 0,
+      "norm_label": "height()"
+    },
+    {
+      "label": "color()",
+      "file_type": "code",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L28",
+      "id": "app_scenenode_color",
+      "community": 6,
+      "norm_label": "color()"
+    },
+    {
+      "label": "InputHandler.cpp",
+      "file_type": "code",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L1",
+      "id": "app_inputhandler_cpp",
+      "community": 1,
+      "norm_label": "inputhandler.cpp"
+    },
+    {
+      "label": "isPanToolActive()",
+      "file_type": "code",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L3",
+      "id": "app_inputhandler_ispantoolactive",
+      "community": 1,
+      "norm_label": "ispantoolactive()"
+    },
+    {
+      "label": "processKeyPress()",
+      "file_type": "code",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L5",
+      "id": "app_inputhandler_processkeypress",
+      "community": 1,
+      "norm_label": "processkeypress()"
+    },
+    {
+      "label": "processMouseDrag()",
+      "file_type": "code",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L13",
+      "id": "app_inputhandler_processmousedrag",
+      "community": 1,
+      "norm_label": "processmousedrag()"
+    },
+    {
+      "label": "processKeyRelease()",
+      "file_type": "code",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L19",
+      "id": "app_inputhandler_processkeyrelease",
+      "community": 1,
+      "norm_label": "processkeyrelease()"
+    },
+    {
+      "label": "WorkspaceEngine.cpp",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L1",
+      "id": "app_workspaceengine_cpp",
+      "community": 0,
+      "norm_label": "workspaceengine.cpp"
+    },
+    {
+      "label": "state()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L8",
+      "id": "app_workspaceengine_state",
+      "community": 0,
+      "norm_label": "state()"
+    },
+    {
+      "label": "mousePressEvent()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L10",
+      "id": "app_workspaceengine_mousepressevent",
+      "community": 0,
+      "norm_label": "mousepressevent()"
+    },
+    {
+      "label": "mouseReleaseEvent()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L17",
+      "id": "app_workspaceengine_mousereleaseevent",
+      "community": 0,
+      "norm_label": "mousereleaseevent()"
+    },
+    {
+      "label": "mouseMoveEvent()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L26",
+      "id": "app_workspaceengine_mousemoveevent",
+      "community": 0,
+      "norm_label": "mousemoveevent()"
+    },
+    {
+      "label": "keyPressEvent()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L34",
+      "id": "app_workspaceengine_keypressevent",
+      "community": 0,
+      "norm_label": "keypressevent()"
+    },
+    {
+      "label": "keyReleaseEvent()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L39",
+      "id": "app_workspaceengine_keyreleaseevent",
+      "community": 0,
+      "norm_label": "keyreleaseevent()"
+    },
+    {
+      "label": "wheelEvent()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L45",
+      "id": "app_workspaceengine_wheelevent",
+      "community": 0,
+      "norm_label": "wheelevent()"
+    },
+    {
+      "label": "setState()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L62",
+      "id": "app_workspaceengine_setstate",
+      "community": 0,
+      "norm_label": "setstate()"
+    },
+    {
+      "label": "updatePaintNode()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L84",
+      "id": "app_workspaceengine_updatepaintnode",
+      "community": 0,
+      "norm_label": "updatepaintnode()"
+    },
+    {
+      "label": "syncNodes()",
+      "file_type": "code",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L130",
+      "id": "app_workspaceengine_syncnodes",
+      "community": 0,
+      "norm_label": "syncnodes()"
+    },
+    {
+      "label": "main.cpp",
+      "file_type": "code",
+      "source_file": "app/main.cpp",
+      "source_location": "L1",
+      "id": "app_main_cpp",
+      "community": 10,
+      "norm_label": "main.cpp"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "app/main.cpp",
+      "source_location": "L6",
+      "id": "app_main_main",
+      "community": 10,
+      "norm_label": "main()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": ".opencode/package.json",
+      "source_location": "L1",
+      "id": "opencode_package_json",
+      "community": 9,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": ".opencode/package.json",
+      "source_location": "L2",
+      "id": "opencode_package_dependencies",
+      "community": 9,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@opencode-ai/plugin",
+      "file_type": "code",
+      "source_file": ".opencode/package.json",
+      "source_location": "L3",
+      "id": "opencode_package_dependencies_opencode_ai_plugin",
+      "community": 9,
+      "norm_label": "@opencode-ai/plugin"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 3,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Stick Drift - Figma Alternative for the Sane with 3D design capabilities",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "stickdrift_readme_stick_drift_figma_alternative_for_the_sane_with_3d_design_capabilities",
+      "community": 3,
+      "norm_label": "stick drift - figma alternative for the sane with 3d design capabilities"
+    },
+    {
+      "label": "The Idea",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L3",
+      "id": "stickdrift_readme_the_idea",
+      "community": 3,
+      "norm_label": "the idea"
+    },
+    {
+      "label": "Why emphasize on 3D?",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L8",
+      "id": "stickdrift_readme_why_emphasize_on_3d",
+      "community": 3,
+      "norm_label": "why emphasize on 3d?"
+    },
+    {
+      "label": "Current Requirements",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "id": "stickdrift_readme_current_requirements",
+      "community": 3,
+      "norm_label": "current requirements"
+    },
+    {
+      "label": "Additional features (Good to have)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "id": "stickdrift_readme_additional_features_good_to_have",
+      "community": 3,
+      "norm_label": "additional features (good to have)"
+    },
+    {
+      "label": "Development timeline",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "id": "stickdrift_readme_development_timeline",
+      "community": 3,
+      "norm_label": "development timeline"
+    },
+    {
+      "label": "Phase 1: Get the basic thing working (Workspace + 2D UI Design essentials)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "id": "stickdrift_readme_phase_1_get_the_basic_thing_working_workspace_2d_ui_design_essentials",
+      "community": 3,
+      "norm_label": "phase 1: get the basic thing working (workspace + 2d ui design essentials)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ajb_sh",
+      "target": "home_alan_ajb_projects_stickdrift_ajb_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "ajb_sh",
+      "target": "stickdrift_ajb_do_configure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "ajb_sh",
+      "target": "stickdrift_ajb_do_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "ajb_sh",
+      "target": "stickdrift_ajb_do_clean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "ajb_sh",
+      "target": "stickdrift_ajb_do_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "ajb_sh",
+      "target": "stickdrift_ajb_do_clean_vcpkg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "call",
+      "source": "home_alan_ajb_projects_stickdrift_ajb_sh__entry",
+      "target": "stickdrift_ajb_do_configure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L51",
+      "weight": 1.0,
+      "context": "call",
+      "source": "home_alan_ajb_projects_stickdrift_ajb_sh__entry",
+      "target": "stickdrift_ajb_do_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L54",
+      "weight": 1.0,
+      "context": "call",
+      "source": "home_alan_ajb_projects_stickdrift_ajb_sh__entry",
+      "target": "stickdrift_ajb_do_clean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "call",
+      "source": "home_alan_ajb_projects_stickdrift_ajb_sh__entry",
+      "target": "stickdrift_ajb_do_clean_vcpkg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L60",
+      "weight": 1.0,
+      "context": "call",
+      "source": "home_alan_ajb_projects_stickdrift_ajb_sh__entry",
+      "target": "stickdrift_ajb_do_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ajb.sh",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "call",
+      "source": "stickdrift_ajb_do_build",
+      "target": "stickdrift_ajb_do_configure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vcpkg.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "vcpkg_json",
+      "target": "stickdrift_vcpkg_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vcpkg.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "vcpkg_json",
+      "target": "stickdrift_vcpkg_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vcpkg.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "vcpkg_json",
+      "target": "stickdrift_vcpkg_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "vcpkg_configuration_json",
+      "target": "stickdrift_vcpkg_configuration_default_registry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "vcpkg_configuration_json",
+      "target": "stickdrift_vcpkg_configuration_registries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "stickdrift_vcpkg_configuration_default_registry",
+      "target": "stickdrift_vcpkg_configuration_default_registry_kind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "stickdrift_vcpkg_configuration_default_registry",
+      "target": "stickdrift_vcpkg_configuration_default_registry_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vcpkg-configuration.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "stickdrift_vcpkg_configuration_default_registry",
+      "target": "stickdrift_vcpkg_configuration_default_registry_repository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/InputHandler.h",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_inputhandler_h",
+      "target": "app_inputhandler_inputhandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.h",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_workspaceengine_h",
+      "target": "app_inputhandler_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_inputhandler_cpp",
+      "target": "app_inputhandler_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_inputhandler_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneGraph.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_scenegraph_cpp",
+      "target": "app_scenegraph_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneGraph.cpp",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_scenegraph_cpp",
+      "target": "app_scenenode_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneGraph.cpp",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_scenegraph_cpp",
+      "target": "app_scenegraph_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneGraph.h",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_scenegraph_h",
+      "target": "app_scenenode_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneGraph.h",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_scenegraph_h",
+      "target": "app_scenegraph_scenegraph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.h",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_workspacestate_h",
+      "target": "app_scenegraph_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/SceneGraph.h",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "app_scenegraph_scenegraph",
+      "target": "app_scenenode_scenenode"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.h",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_workspacestate_h",
+      "target": "app_constants_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.h",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "app_workspacestate_h",
+      "target": "app_workspacestate_workspacestate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.h",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_workspaceengine_h",
+      "target": "app_workspacestate_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspacestate_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_setworkspacebackgroundcolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_setzoom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_setpan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_pan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_zoom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_setcurrenttool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_maptoworld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "app_workspacestate_cpp",
+      "target": "app_workspacestate_createrectangle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "app_workspacestate_setzoom",
+      "target": "app_workspacestate_maptoworld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "app_workspacestate_setzoom",
+      "target": "app_workspacestate_setpan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceState.cpp",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "app_workspacestate_createrectangle",
+      "target": "app_workspacestate_maptoworld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.h",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_workspaceengine_h",
+      "target": "app_workspaceengine_workspaceengine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.h",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "app_scenenode_h",
+      "target": "app_scenenode_scenenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.h",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "app_scenenode_h",
+      "target": "app_scenenode_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_scenenode_cpp",
+      "target": "app_scenenode_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.h",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "app_scenenode_type",
+      "target": "app_scenenode_scenenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_scenenode_cpp",
+      "target": "app_scenenode_markdirty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_scenenode_cpp",
+      "target": "app_scenenode_setcolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "app_scenenode_cpp",
+      "target": "app_scenenode_setwidth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "app_scenenode_cpp",
+      "target": "app_scenenode_setheight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "app_scenenode_cpp",
+      "target": "app_scenenode_width",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "app_scenenode_cpp",
+      "target": "app_scenenode_height",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "app_scenenode_cpp",
+      "target": "app_scenenode_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_scenenode_setcolor",
+      "target": "app_scenenode_markdirty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "app_scenenode_setwidth",
+      "target": "app_scenenode_markdirty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/SceneNode.cpp",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "app_scenenode_setheight",
+      "target": "app_scenenode_markdirty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "app_workspaceengine_wheelevent",
+      "target": "app_scenenode_width"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "app_workspaceengine_updatepaintnode",
+      "target": "app_scenenode_width"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "app_workspaceengine_wheelevent",
+      "target": "app_scenenode_height"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "app_workspaceengine_updatepaintnode",
+      "target": "app_scenenode_height"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_inputhandler_cpp",
+      "target": "app_inputhandler_ispantoolactive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_inputhandler_cpp",
+      "target": "app_inputhandler_processkeypress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "app_inputhandler_cpp",
+      "target": "app_inputhandler_processmousedrag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/InputHandler.cpp",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "app_inputhandler_cpp",
+      "target": "app_inputhandler_processkeyrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_mousepressevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_mousereleaseevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_mousemoveevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_keypressevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_keyreleaseevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_wheelevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_setstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_updatepaintnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "app_workspaceengine_cpp",
+      "target": "app_workspaceengine_syncnodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/WorkspaceEngine.cpp",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "app_workspaceengine_updatepaintnode",
+      "target": "app_workspaceengine_syncnodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.cpp",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_main_cpp",
+      "target": "app_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "opencode_package_json",
+      "target": "opencode_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "opencode_package_dependencies",
+      "target": "opencode_package_dependencies_opencode_ai_plugin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "stickdrift_readme_stick_drift_figma_alternative_for_the_sane_with_3d_design_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "stickdrift_readme_stick_drift_figma_alternative_for_the_sane_with_3d_design_capabilities",
+      "target": "stickdrift_readme_the_idea",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "stickdrift_readme_stick_drift_figma_alternative_for_the_sane_with_3d_design_capabilities",
+      "target": "stickdrift_readme_why_emphasize_on_3d",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "stickdrift_readme_stick_drift_figma_alternative_for_the_sane_with_3d_design_capabilities",
+      "target": "stickdrift_readme_current_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "stickdrift_readme_stick_drift_figma_alternative_for_the_sane_with_3d_design_capabilities",
+      "target": "stickdrift_readme_additional_features_good_to_have",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "stickdrift_readme_stick_drift_figma_alternative_for_the_sane_with_3d_design_capabilities",
+      "target": "stickdrift_readme_development_timeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "stickdrift_readme_development_timeline",
+      "target": "stickdrift_readme_phase_1_get_the_basic_thing_working_workspace_2d_ui_design_essentials",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "b45be5e0a2fb7aa5b939bd3230ab2cbd63805e1b"
+}

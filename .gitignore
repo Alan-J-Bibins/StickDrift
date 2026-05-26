@@ -84,3 +84,9 @@ CMakeLists.txt.user*
 /.qmlls.ini
 
 .cache/
+# mtime-based, breaks after git clone
+/graphify-out/manifest.json    
+# local only
+/graphify-out/cost.json        
+# graphify-out/cache/         # optional: commit for speed, skip to keep repo small
+/graphify-out/manifest.json

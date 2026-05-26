@@ -44,8 +44,8 @@ Item {
         y: Math.min(rectangleTool.startPoint.y, rectangleTool.currentPoint.y)
         width: Math.abs(rectangleTool.currentPoint.x - rectangleTool.startPoint.x)
         height: Math.abs(rectangleTool.currentPoint.y - rectangleTool.startPoint.y)
-        border.width: 1
+        border.width: 2
         border.color: Theme.primary_1
-        color: Qt.alpha(Theme.primary_1, 0.2)
+        color: "white"
     }
 }

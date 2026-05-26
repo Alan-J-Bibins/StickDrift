@@ -13,10 +13,15 @@ void WorkspaceState::setWorkspaceBackgroundColor(const QColor &color) {
     }
 }
 
-void WorkspaceState::setZoom(float z) {
-    if (qFuzzyCompare(m_zoom, z))
+void WorkspaceState::setZoom(float targetZoom, const QPointF &pivot) {
+    if (qFuzzyCompare(m_zoom, targetZoom) || targetZoom < 0.01f)
         return;
-    m_zoom = z;
+
+    QPointF worldBefore = mapToWorld(pivot);
+
+    m_zoom = targetZoom;
+    setPan(pivot - (worldBefore * m_zoom));
+
     emit zoomChanged();
 }
 
@@ -31,11 +36,6 @@ QPointF WorkspaceState::pan() const { return m_pan; }
 float WorkspaceState::zoom() const { return m_zoom; }
 SceneGraph *WorkspaceState::graph() const { return m_graph; }
 
-void WorkspaceState::createRectangle(int x, int y, int width, int height) {
-    auto rect = new RectangleNode(x, y, width, height);
-    m_graph->root()->children.append(rect);
-    emit graphChanged();
-}
 void WorkspaceState::setCurrentTool(StickDrift::ToolType tool) {
     if (m_currentTool == tool)
         return;
@@ -44,3 +44,12 @@ void WorkspaceState::setCurrentTool(StickDrift::ToolType tool) {
 }
 
 QPointF WorkspaceState::mapToWorld(QPointF screenPos) { return (screenPos - m_pan) / m_zoom; }
+
+void WorkspaceState::createRectangle(int x, int y, int width, int height) {
+    QPointF worldPos = mapToWorld(QPointF(x, y));
+    float worldWidth = width / m_zoom;
+    float worldHeight = height / m_zoom;
+    auto rect = new RectangleNode(static_cast<int>(worldPos.x()), static_cast<int>(worldPos.y()), static_cast<int>(worldWidth), static_cast<int>(worldHeight));
+    m_graph->root()->children.append(rect);
+    emit graphChanged();
+}

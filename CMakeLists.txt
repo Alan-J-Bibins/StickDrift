@@ -106,6 +106,7 @@ set(qml_singletons
 
 set(app_headers
     app/Constants.h
+    app/InputHandler.h
     app/SceneGraph.h
     app/SceneNode.h
     app/WorkspaceEngine.h
@@ -113,6 +114,7 @@ set(app_headers
 )
 
 set(app_files
+    app/InputHandler.cpp
     app/SceneGraph.cpp
     app/SceneNode.cpp
     app/WorkspaceEngine.cpp

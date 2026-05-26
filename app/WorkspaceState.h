@@ -15,7 +15,6 @@ class WorkspaceState : public QObject {
     Q_OBJECT
     Q_PROPERTY(StickDrift::ToolType currentTool READ currentTool WRITE setCurrentTool NOTIFY currentToolChanged)
     Q_PROPERTY(QColor workspaceBackgroundColor READ workspaceBackgroundColor WRITE setWorkspaceBackgroundColor NOTIFY workspaceBackgroundColorChanged)
-    Q_PROPERTY(float zoom READ zoom WRITE setZoom NOTIFY zoomChanged)
     Q_PROPERTY(QPointF pan READ pan WRITE setPan NOTIFY panChanged)
     QML_ELEMENT
     QML_SINGLETON
@@ -39,7 +38,7 @@ class WorkspaceState : public QObject {
     QColor workspaceBackgroundColor() const { return m_workspaceBackgroundColor; }
     void setWorkspaceBackgroundColor(const QColor &color);
     float zoom() const;
-    void setZoom(float z);
+    void setZoom(float targetZoom, const QPointF &pivot);
     QPointF pan() const;
     void setPan(QPointF pan);
     SceneGraph *graph() const;

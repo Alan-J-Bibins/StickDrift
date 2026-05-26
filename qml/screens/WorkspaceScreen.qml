@@ -17,6 +17,9 @@ Item {
         TapHandler {
             onTapped: workspaceScreen.forceActiveFocus()
         }
+        onStateChanged: {
+            console.log("Pan tool is online")
+        }
     }
 
     SelectTool {

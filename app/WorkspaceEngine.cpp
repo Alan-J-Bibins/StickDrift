@@ -1,4 +1,5 @@
 #include "WorkspaceEngine.h"
+#include "InputHandler.h"
 #include "WorkspaceState.h"
 #include <QQuickItem>
 #include <QSGNode>
@@ -9,19 +10,52 @@ WorkspaceState *WorkspaceEngine::state() const { return m_state; };
 void WorkspaceEngine::mousePressEvent(QMouseEvent *event) {
     // We'll handle panning/selection logic here later
     qDebug() << "Mouse pressed at:" << event->position() << "with zoom:" << m_state->zoom();
-
-    // It handles Qt types like magic:
-    qDebug() << "Current BG Color:" << m_state->workspaceBackgroundColor();
+    m_lastMousePos = event->position();
     event->accept();
+}
+
+void WorkspaceEngine::mouseReleaseEvent(QMouseEvent *event) {
+    qDebug() << "Mouse released at:" << event->position() << "with zoom:" << m_state->zoom();
+
+    if(!m_inputHandler->isPanToolActive()) {
+        m_inputHandler->processMouseDrag(event, event->position() - m_lastMousePos);
+    }
+    event->accept();
+}
+
+void WorkspaceEngine::mouseMoveEvent(QMouseEvent *event) {
+    if (m_inputHandler->isPanToolActive()) {
+        QPointF delta = event->position() - m_lastMousePos;
+        m_inputHandler->processMouseDrag(event, delta);
+        m_lastMousePos = event->position();
+    }
+}
+
+void WorkspaceEngine::keyPressEvent(QKeyEvent *event) {
+    m_inputHandler->processKeyPress(event);
+    if (!event->isAccepted())
+        QQuickItem::keyPressEvent(event);
+}
+void WorkspaceEngine::keyReleaseEvent(QKeyEvent *event) {
+    m_inputHandler->processKeyRelease(event);
+    if (!event->isAccepted())
+        QQuickItem::keyReleaseEvent(event);
 }
 
 void WorkspaceEngine::wheelEvent(QWheelEvent *event) {
     if (!m_state)
         return;
-    float delta = event->angleDelta().y() > 0 ? 1.2f : 0.8f;
-    qDebug() << "Current BG Color:" << m_state->workspaceBackgroundColor();
-    qDebug() << "Current delta" << delta;
-    m_state->setZoom(m_state->zoom() * delta);
+
+    float scaleFactor = event->angleDelta().y() > 0 ? 1.1f : 0.9f;
+    float targetZoom = m_state->zoom() * scaleFactor;
+
+    // To zoom to screen center:
+    QPointF pivot(width() / 2.0, height() / 2.0);
+
+    // OR To zoom to mouse position (much better feel):
+    // QPointF pivot = event->position();
+
+    m_state->setZoom(targetZoom, pivot);
     event->accept();
 }
 
@@ -38,6 +72,9 @@ void WorkspaceEngine::setState(WorkspaceState *state) {
         connect(m_state, &WorkspaceState::panChanged, this, &QQuickItem::update);
         connect(m_state, &WorkspaceState::workspaceBackgroundColorChanged, this, &QQuickItem::update);
         connect(m_state, &WorkspaceState::graphChanged, this, &QQuickItem::update);
+        connect(m_inputHandler, &InputHandler::requestPan, this, [this](const QPointF &delta) { m_state->setPan(m_state->pan() + delta); });
+
+        connect(m_inputHandler, &InputHandler::panToolToggled, this, [this](bool active) { setCursor(active ? Qt::OpenHandCursor : Qt::ArrowCursor); });
     }
 
     emit stateChanged();
@@ -73,8 +110,8 @@ QSGNode *WorkspaceEngine::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData 
     }
 
     QMatrix4x4 matrix;
-    matrix.scale(m_state->zoom());
     matrix.translate(m_state->pan().x(), m_state->pan().y());
+    matrix.scale(m_state->zoom());
     viewport->setMatrix(matrix);
 
     // 2. Simple Sync (Clear and Rebuild)
